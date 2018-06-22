@@ -66,11 +66,11 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.TeamViewHolder
     }
 
     public void updateTeamList(View progressbar, List<TeamModal> newTeamList) {
-//        new CalculateDiffResult(this, progressbar, newTeamList).execute(teamList, newTeamList);
-        DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new TeamDiffUtilCallback(teamList,newTeamList));
-        diffResult.dispatchUpdatesTo(this);
-        teamList.clear();
-        teamList.addAll(newTeamList);
+        new CalculateDiffResult(this, progressbar, newTeamList).execute(teamList, newTeamList);
+//        DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new TeamDiffUtilCallback(teamList,newTeamList));
+//        diffResult.dispatchUpdatesTo(this);
+//        teamList.clear();
+//        teamList.addAll(newTeamList);
     }
 
     public static final class CalculateDiffResult extends AsyncTask<List<TeamModal>, Void, DiffUtil.DiffResult> {

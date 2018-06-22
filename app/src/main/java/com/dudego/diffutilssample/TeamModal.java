@@ -5,6 +5,8 @@ public class TeamModal {
     private int id;
     private String likes;
     private String score;
+    private String country;
+
 
     public String getCountry() {
         return country;
@@ -13,8 +15,6 @@ public class TeamModal {
     public void setCountry(String country) {
         this.country = country;
     }
-
-    private String country;
 
     public int getId() {
         return id;

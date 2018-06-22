@@ -31,7 +31,7 @@ public class TeamDiffUtilCallback extends DiffUtil.Callback {
 
     @Override
     public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
-        return true;//newTeamList.get(newItemPosition).getId() == oldTeamList.get(oldItemPosition).getId();
+        return newTeamList.get(newItemPosition).getId() == oldTeamList.get(oldItemPosition).getId();
     }
 
     @Override

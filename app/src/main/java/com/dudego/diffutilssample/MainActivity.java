@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
             TeamModal newModal = new TeamModal();
             if (i%5 ==0) {
                 newModal.setId(1000+i);
+            } else {
+                newModal.setId(i);
             }
             if (i%3==0) {
                 newModal.setLikes(teamModal.getLikes() + "new" + i);
